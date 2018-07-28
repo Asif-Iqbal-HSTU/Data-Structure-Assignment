@@ -23,10 +23,29 @@ void view()
 
 void newelement()
 {
-    int item, pos, i,*s;
+    int item, pos, i,*s,j;
     cout<<"Enter the ITEM to be inserted: ";
-    cin>>item;
-    cout<<"Enter position of ITEM: ";
+     int p=0;
+    char str1[564];
+    memset(str1,0,sizeof(str1));
+        //cin>>str;
+    scanf("%s",str1);
+    for(j=0;j<strlen(str1);j++){
+        if(str1[j]<='9' && str1[j]>='0'){
+            p=p*10+str1[j]-'0';
+        }
+        else {
+            cout<<"it is a character, please insert integer\n";
+            p=0;
+            newelement();
+            break;
+        }
+    }
+    if(p!=0){
+        item=p;
+   // cin>>item;
+        cout<<"Enter position of ITEM: ";
+    }
     cin>>pos;
     for(i=size; i>=pos; i--)
     {
@@ -36,7 +55,6 @@ void newelement()
     s=&size;
     //size=&size+1;
     *s=*s+1;
-    cout<<"Element added successfully and ";
     view();
 }
 void search()
