@@ -172,17 +172,17 @@ void choose();
 void more()
 {
     int more;
-    cout<<"Do you want to do perform more job? if YES, enter 1; otherwise enter 0: ";
+    cout<<"Do you want to do perform more job? if YES, enter any key; otherwise enter 0: ";
     cin>>more;
-    if(more==1)
-    {
-        system("cls");
-        choose();
-    }
-    else
+    if(more==0)
     {
         cout<<endl<<"THANK YOU";
         exit(0);
+    }
+    else
+    {
+        system("cls");
+        choose();
     }
 
 }
