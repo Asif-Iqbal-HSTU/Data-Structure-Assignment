@@ -26,27 +26,6 @@ int find_substring(string t, string p)
     return z;
 }
 
-void task_1_2()
-{
-
-}
-
-void task_1_3()
-{
-
-}
-
-void task_1_4()
-{
-
-}
-
-void task_1_5()
-{
-
-}
-
-
 int main()
 {
     string t = "A THING OF BEAUTY IS A JOY FOREVER";
